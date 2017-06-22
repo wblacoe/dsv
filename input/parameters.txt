@@ -1,0 +1,54 @@
+# experiment
+pipeline output file = /local/dsv/output/pipeline.txt
+amount of threads = 25
+#pretty print = false #delme
+vector distribution similarity function = all senses #only top sense pair #aligned senses
+
+# vocabulary
+vocabulary file = /local/dsv/output/vocabulary.txt
+word form = lemma
+
+# corpus reader
+corpus reader = conll corpus reader
+corpus folder = /local/dsv/corpora/ukwac.tiny.5files
+#corpus folder = /local/dsv/corpora/ukwac.depParsed.40files
+amount of documents = 100 #at least 100
+sentence format = sentences and deptrees
+# stoplist ?
+
+# counter
+counter model = clustering counter
+context elements input file = /local/dsv/input/contextWords.noPos.txt
+#context elements input file = /local/dsv/output/contextWords.output.txt
+context windows input file = /local/dsv/input/contextWindows.txt
+context elements output file = /local/dsv/output/contextWords.txt
+counts output folder = /local/dsv/output/counts
+are count vectors sparse = true
+
+# sequential clustering model
+sequential clustering model = mini batch kmeans
+#sequential clustering model = sequential kmeans
+#sequential clustering model = sequential agglomerative clustering
+amount of clusters = 5
+mini batch capacity = 20
+amount of iterations = 1
+p norm = 1
+clustering output folder = /local/dsv/output/clustered
+
+# association function
+association function = pmi
+association function output folder = /local/dsv/output/associationated
+
+# task: wordsim353
+target elements input file = /local/dsv/input/targetWords.txt
+dataset file = /local/dsv/input/wordsim353.txt
+task output file = /local/dsv/output/wordsim353.results.txt
+
+# task: ml2008
+#target elements input file = /local/dsv/input/targetWords.txt
+#dataset file = /local/dsv/input/ml2008.txt
+#task output file = /local/dsv/output/ml2008.results.txt
+
+
+# debug
+debug output folder = /local/dsv/output/debug

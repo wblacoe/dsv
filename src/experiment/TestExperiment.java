@@ -14,7 +14,7 @@ public class TestExperiment extends AbstractExperiment{
     private File parametersFile;
             
     public TestExperiment(){
-        parametersFile = new File("C:\\Users\\AMD\\Desktop\\Misc\\work\\mwe_temp\\parameters.txt");;
+        parametersFile = new File(".../parameters.txt");;
     }
     public TestExperiment(File parametersFile){
         this.parametersFile = parametersFile;
