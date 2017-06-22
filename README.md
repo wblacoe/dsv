@@ -1,6 +1,6 @@
 <h1>DSV</h1>
 is a Java package for <b>Distributional Sense Vectors</b>. The following is a quick documentation of the contained classes.
-Arrange for a corpus and use experiment.TestExperiment for a trial run.
+Arrange for a corpus, create an output folder, and then edit and use experiment.TestExperiment.java for a trial run.
 
 <br><br>
 
